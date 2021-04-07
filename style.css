@@ -23,6 +23,18 @@ Tags:white,light,one-column,two-columns,left-sidebar,right-sidebar,fluid-layout,
 	font-weight:normal;
 	font-style: normal;
 }
+@font-face {
+	font-family:'song';
+	src:url('fonts/song.ttf') format('truetype');
+	font-weight:normal;
+	font-style: normal;
+}
+@font-face {
+	font-family:'kai';
+	src:url('fonts/kai.ttf') format('truetype');
+	font-weight:normal;
+	font-style: normal;
+}
 /*--------------------------------------------------------------1.0 - Reset--------------------------------------------------------------*/
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {
 	border:0;
@@ -462,19 +474,20 @@ a:active,a:focus {
 	letter-spacing:2px;
 	line-height:1;
 	margin-top:25px;
-	margin-bottom:20px;
+	margin-bottom:5px;
 	text-transform:uppercase;
 }
 
 .site-title-chinese {
-	font-family:'Quattrocento Sans',sans-serif;
-	font-size:60px;
+        font-family: 'song', 'kai', sans-serif;
+	font-size:40px;
 	font-weight:300;
 	letter-spacing:2px;
 	line-height:1;
-	margin-top:25px;
+	margin-top:5px;
 	margin-bottom:20px;
 	text-transform:uppercase;
+	text-align: center;
 }
 
 .site-title a {
@@ -1964,16 +1977,8 @@ ul.shortcode-archive li {
 			margin: 0 10px 48px;
 	}
 }
+
 /* Masonry */
-@media (min-width:480px) {
-	.bloggrid article {
-		width:46%;
-		margin-right:4%;
-	}
-	.bloggrid article:nth-child(2n+2) {
-		margin-right:0;
-	}
-}
 .bloggrid article.hentry,.single-portfolio .hentry {
 	margin-bottom:0;
 }
@@ -2208,6 +2213,7 @@ h6 { font-size: 12px; }
 	text-align: center;
 	text-transform: none;
 }
+
 .site-description {
 	font-size: 14px;
 	font-style: italic;
