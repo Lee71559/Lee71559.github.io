@@ -165,7 +165,7 @@ p {
   font-size: 45px;
   color: #000;
   padding-bottom: 20px; }
-  @media (max-width: 900px) {
+  @media (max-width: 767px) {
     .section-title .title {
       font-size: 30px; } }
 
