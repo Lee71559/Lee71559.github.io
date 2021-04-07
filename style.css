@@ -24,6 +24,12 @@ Tags:white,light,one-column,two-columns,left-sidebar,right-sidebar,fluid-layout,
 	font-style: normal;
 }
 @font-face {
+	font-family:'fancy';
+	src:url('fonts/fancy.ttf') format('truetype');
+	font-weight:normal;
+	font-style: normal;
+}
+@font-face {
 	font-family:'song';
 	src:url('fonts/song.ttf') format('truetype');
 	font-weight:normal;
@@ -468,13 +474,13 @@ a:active,a:focus {
 	text-align:center;
 }
 .site-title {
-	font-family:'Quattrocento Sans',sans-serif;
-	font-size:60px;
+	font-family:'fancy',sans-serif;
+	font-size:30px;
 	font-weight:300;
 	letter-spacing:2px;
 	line-height:1;
-	margin-top:25px;
-	margin-bottom:5px;
+	margin-top:20px;
+	margin-bottom:25px;
 	text-transform:uppercase;
 }
 
@@ -484,8 +490,8 @@ a:active,a:focus {
 	font-weight:300;
 	letter-spacing:2px;
 	line-height:1;
-	margin-top:5px;
-	margin-bottom:20px;
+	margin-top:25px;
+	margin-bottom:10px;
 	text-transform:uppercase;
 	text-align: center;
 }
@@ -2179,7 +2185,7 @@ form.comment-form {
 /* CUSTOM STYLE */
 body { font-family: 'Roboto'; }
 h1, h2, h3, h4, h5, h6 { font-family: 'Oswald'; }
-.site-title { font-family: 'Herr Von Muellerhoff'; }
+.site-title { font-family: 'fancy'; }
 .site-description { font-family: 'Quattrocento Sans'; }
 .entry-title { font-family: 'Oswald'; }
 .main-navigation { font-family: 'Oswald'; }
@@ -2205,8 +2211,14 @@ h3 { font-size: 24px; }
 h4 { font-size: 18px; }
 h5 { font-size: 14px; }
 h6 { font-size: 12px; }
+
+.chinese {
+    font-family: "song", "kai", sans-serif;
+    font-size: 18px;
+}
+
 .site-title {
-	font-size: 60px;
+	font-size: 40px;
 	font-style: normal;
 	font-weight: 300;
 	letter-spacing: 2px;
