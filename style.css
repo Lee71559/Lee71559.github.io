@@ -465,6 +465,18 @@ a:active,a:focus {
 	margin-bottom:20px;
 	text-transform:uppercase;
 }
+
+.site-title-chinese {
+	font-family:'Quattrocento Sans',sans-serif;
+	font-size:60px;
+	font-weight:300;
+	letter-spacing:2px;
+	line-height:1;
+	margin-top:25px;
+	margin-bottom:20px;
+	text-transform:uppercase;
+}
+
 .site-title a {
 		text-decoration:none;
 }
