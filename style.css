@@ -41,6 +41,12 @@ Tags:white,light,one-column,two-columns,left-sidebar,right-sidebar,fluid-layout,
 	font-weight:normal;
 	font-style: normal;
 }
+@font-face {
+	font-family:'kai2';
+	src:url('fonts/kai2.ttf') format('truetype');
+	font-weight:normal;
+	font-style: normal;
+}
 /*--------------------------------------------------------------1.0 - Reset--------------------------------------------------------------*/
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {
 	border:0;
@@ -264,7 +270,7 @@ big {
 }
 /*--------------------------------------------------------------4.0 Elements--------------------------------------------------------------*/
 hr {
-	background-color:#e5e5e5;
+	background-color:#696969;
 	border:0;
 	height:1px;
 	margin-bottom:1.5em;
@@ -2212,8 +2218,14 @@ h4 { font-size: 18px; }
 h5 { font-size: 14px; }
 h6 { font-size: 12px; }
 
+p {color: #696969; }
+
 .chinese {
-    font-family: "song", "kai", sans-serif;
+    font-family: "kai","kai2", sans-serif;
+    font-size: 18px;
+}
+.chinese-song {
+    font-family: "song","kai","kai2", sans-serif;
     font-size: 18px;
 }
 
