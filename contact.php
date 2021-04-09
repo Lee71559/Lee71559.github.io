@@ -3,12 +3,19 @@
 //Retrieve form data. 
 //GET - user submitted data using AJAX
 //POST - in case user does not support javascript, we'll use POST instead
+$to = 'lee71559@gmail.com';	
 $name = ($_GET['name']) ? $_GET['name'] : $_POST['name'];
 $email = ($_GET['email']) ?$_GET['email'] : $_POST['email'];
 $comment = ($_GET['comment']) ?$_GET['comment'] : $_POST['comment'];
 
-//flag to indicate which method it uses. If POST set it to 1
+if(mail($to, $name, $comment)){
+    echo 'Your mail has been sent successfully.';
+} else{
+    echo 'Unable to send email. Please try again.';
+}
 
+//flag to indicate which method it uses. If POST set it to 1
+/*
 if ($_POST) $post=1;
 
 //Simple server side validation for POST data, of course, you should validate the email
@@ -71,5 +78,5 @@ function sendmail($to, $subject, $message, $from) {
             return 0;
         }
 }
-
+*/
 ?>
