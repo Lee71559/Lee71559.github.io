@@ -3,19 +3,12 @@
 //Retrieve form data. 
 //GET - user submitted data using AJAX
 //POST - in case user does not support javascript, we'll use POST instead
-$to = 'lee71559@gmail.com';	
 $name = ($_GET['name']) ? $_GET['name'] : $_POST['name'];
 $email = ($_GET['email']) ?$_GET['email'] : $_POST['email'];
 $comment = ($_GET['comment']) ?$_GET['comment'] : $_POST['comment'];
 
-if(mail($to, $name, $comment)){
-    echo 'Your mail has been sent successfully.';
-} else{
-    echo 'Unable to send email. Please try again.';
-}
-
 //flag to indicate which method it uses. If POST set it to 1
-/*
+
 if ($_POST) $post=1;
 
 //Simple server side validation for POST data, of course, you should validate the email
@@ -27,7 +20,7 @@ if (!$comment) $errors[count($errors)] = 'Please enter your message.';
 if (!$errors) {
 
 	//recipient - replace your email here
-	$to = 'lee71559@gmail.com';	
+	$to = 'wowthemesnet@gmail.com';	
 	//sender - from the form
 	$from = $name . ' <' . $email . '>';
 	
@@ -55,10 +48,8 @@ if (!$errors) {
 //if the errors array has values
 } else {
 	//display the errors message
-	for ($i=0; $i<count($errors); $i++) {
-            echo $errors[$i] . '<br/>';
-        }
-        echo '<a href="index.html">Back</a>';
+	for ($i=0; $i<count($errors); $i++) echo $errors[$i] . '<br/>';
+	echo '<a href="index.html">Back</a>';
 	exit;
 }
 
@@ -71,12 +62,8 @@ function sendmail($to, $subject, $message, $from) {
 	
 	$result = mail($to,$subject,$message,$headers);
 	
-	if ($result) {
-            return 1;
-        }
-        else {
-            return 0;
-        }
+	if ($result) return 1;
+	else return 0;
 }
-*/
+
 ?>
