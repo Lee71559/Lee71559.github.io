@@ -20,7 +20,7 @@ if (!$comment) $errors[count($errors)] = 'Please enter your message.';
 if (!$errors) {
 
 	//recipient - replace your email here
-	$to = 'Lee71559@gmail.com';	
+	$to = 'lee71559@gmail.com';	
 	//sender - from the form
 	$from = $name . ' <' . $email . '>';
 	
@@ -48,8 +48,10 @@ if (!$errors) {
 //if the errors array has values
 } else {
 	//display the errors message
-	for ($i=0; $i<count($errors); $i++) echo $errors[$i] . '<br/>';
-	echo '<a href="index.html">Back</a>';
+	for ($i=0; $i<count($errors); $i++) {
+            echo $errors[$i] . '<br/>';
+        }
+        echo '<a href="index.html">Back</a>';
 	exit;
 }
 
@@ -62,8 +64,12 @@ function sendmail($to, $subject, $message, $from) {
 	
 	$result = mail($to,$subject,$message,$headers);
 	
-	if ($result) return 1;
-	else return 0;
+	if ($result) {
+            return 1;
+        }
+        else {
+            return 0;
+        }
 }
 
 ?>
