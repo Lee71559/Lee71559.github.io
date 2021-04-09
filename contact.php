@@ -9,13 +9,21 @@ $comment = ($_GET['comment']) ?$_GET['comment'] : $_POST['comment'];
 
 //flag to indicate which method it uses. If POST set it to 1
 
-if ($_POST) $post=1;
+if ($_POST) {
+    $post=1;
+}
 
 //Simple server side validation for POST data, of course, you should validate the email
-if (!$name) $errors[count($errors)] = 'Please enter your name.';
-if (!$email) $errors[count($errors)] = 'Please enter your email.'; 
-if (!$comment) $errors[count($errors)] = 'Please enter your message.'; 
-
+if (!$name) {
+    $errors[count($errors)] = 'Please enter your name.';
+}
+if (!$email) {
+    $errors[count($errors)] = 'Please enter your email.'; 
+}
+if (!$comment) {
+    $errors[count($errors)] = 'Please enter your message.'; 
+}
+    
 //if the errors array is empty, send the mail
 if (!$errors) {
 
@@ -35,8 +43,12 @@ if (!$errors) {
 	
 	//if POST was used, display the message straight away
 	if ($_POST) {
-		if ($result) echo 'Thank you! We have received your message.';
-		else echo 'Sorry, unexpected error. Please try again later';
+		if ($result) {
+                    echo 'Thank you! We have received your message.';
+                }
+		else {
+                    echo 'Sorry, unexpected error. Please try again later';
+                }
 		
 	//else if GET was used, return the boolean value so that 
 	//ajax script can react accordingly
@@ -48,7 +60,9 @@ if (!$errors) {
 //if the errors array has values
 } else {
 	//display the errors message
-	for ($i=0; $i<count($errors); $i++) echo $errors[$i] . '<br/>';
+	for ($i=0; $i<count($errors); $i++) {
+            echo $errors[$i] . '<br/>';
+        }
 	echo '<a href="index.html">Back</a>';
 	exit;
 }
@@ -62,8 +76,12 @@ function sendmail($to, $subject, $message, $from) {
 	
 	$result = mail($to,$subject,$message,$headers);
 	
-	if ($result) return 1;
-	else return 0;
+	if ($result) {
+            return 1;
+        }
+	else {
+            return 0;
+        }
 }
 
 ?>
