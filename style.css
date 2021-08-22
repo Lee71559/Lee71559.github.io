@@ -2328,3 +2328,10 @@ h1, h2, h3, h4, h5, h6 {
     -o-transition: border linear 0.2s,box-shadow linear 0.2s;
     transition: border linear 0.2s,box-shadow linear 0.2s;
 }
+
+.crochet {
+	width: 30%; display: inline-block;
+	padding: 2%; margin: 1%;
+	text-align: left; 
+	font-size: 16px;
+ }
